@@ -88,6 +88,7 @@ class CreateColumnsCandidatos extends Migration
             $table->dropColumn('dataNascimento');
             $table->dropColumn('telefone');
             $table->dropColumn('celular');
+            //parei aqui
             $table->dropColumn('nomePai');
             $table->dropColumn('nomeMae');
             $table->dropColumn('escolaridade');

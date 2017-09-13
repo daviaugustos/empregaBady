@@ -29,4 +29,12 @@ class HomeController extends Controller
     public function candidatoLoginView () {
         return view('home.candidatoLogin');
     }
+
+    public function salvarEmpresa() {
+        $this->validate(request(), [
+            'txtEmail' => 'email',
+            'password' => 'required|confirmed|min:6',
+            'txtNome' => 'max:100'
+        ]);
+    }
 }
