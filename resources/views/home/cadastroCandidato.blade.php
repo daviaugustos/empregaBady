@@ -36,7 +36,7 @@
                 <input type="text" class="form-control" id="txtCpf" name="txtCpf" placeholder="Informe seu CPF">            </div>
             <div class="form-group col-md-4">
                 <label class="col-form-label" for="sltSexo">Sexo</label>
-                <select class="form-control" id="sltSexo">
+                <select class="form-control" id="sltSexo" name="sltSexo">
                     <option>Selecione o sexo</option>
                     <option>Feminino</option>
                     <option>Masculino</option>
@@ -66,6 +66,38 @@
             <div class="form-group col-md-6">
                 <label for="txtCelular" class="col-form-label">Celular</label>
                 <input type="text" class="form-control" id="txtCelular" name="txtCelular" placeholder="(99) 99999-9999" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="txtNomePai" class="col-form-label">Nome do pai</label>
+                <input type="text" class="form-control" id="txtNomePai" name="txtNomePai" placeholder="Nome completo" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="txtNomeMae" class="col-form-label">Nome da mãe</label>
+                <input type="text" class="form-control" id="txtNomeMae" name="txtNomeMae" placeholder="Nome completo" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label class="col-form-label" for="sltEscolaridade">Escolaridade</label>
+                <select class="form-control" id="sltEscolaridade" name="sltEscolaridade">
+                    <option>Selecione a escolaridade</option>
+                    <option value="ANALFABETO">Analfabeto</option>
+                    <option value="FUNDAMENTAL_INCOMPLETO">Fundamental Incompleto</option>
+                    <option value="FUNDAMENTAL_COMPLETO">Fundamental Completo</option>
+                    <option value="MEDIO_INCOMPLETO">Médio Incompleto</option>
+                    <option value="MEDIO_COMPLETO">Médio Completo</option>
+                    <option value="SUPERIOR_INCOMPLETO">Superior Incompleto</option>
+                    <option value="SUPERIO_COMPLETO">Superior Completo</option>
+                    <option value="ESPECIALIZACAO">Especialização</option>
+                    <option value="MESTRADO">Mestrado</option>
+                    <option value="DOUTORADO">Doutorado</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="txtCnhCategorias" class="col-form-label">Categorias CNH</label>
+                <input type="text" class="form-control" id="txtCnhCategorias" name="txtCnhCategorias" placeholder="A B" required>
             </div>
         </div>
         {{--  <div class="form-group">
