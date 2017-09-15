@@ -107,21 +107,18 @@ class CreateColumnsCandidatos extends Migration
             $table->dropColumn('nomeEmpresa1');
             $table->dropColumn('dataAdmissao1');
             $table->dropColumn('dataSaida1');
-            $table->dropColumn('motivoSaida1');
             $table->dropColumn('cargo1');
             $table->dropColumn('atividadesRealizadas1');
 
             $table->dropColumn('nomeEmpresa2');
             $table->dropColumn('dataAdmissao2');
             $table->dropColumn('dataSaida2');
-            $table->dropColumn('motivoSaida2');
             $table->dropColumn('cargo2');
             $table->dropColumn('atividadesRealizadas2');
 
             $table->dropColumn('nomeEmpresa3');
             $table->dropColumn('dataAdmissao3');
             $table->dropColumn('dataSaida3');
-            $table->dropColumn('motivoSaida3');
             $table->dropColumn('cargo3');
             $table->dropColumn('atividadesRealizadas3');
 

@@ -28,9 +28,9 @@ class CreateColumnsAdmin extends Migration
     public function down()
     {
         Schema::table('admins', function (BluePrint $table){ 
-            $table->dropColumns('nome');
-            $table->dropColumns('email');
-            $table->dropColumns('senha');
+            $table->dropColumn('nome');
+            $table->dropColumn('email');
+            $table->dropColumn('senha');
         });
     }
 }
