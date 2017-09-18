@@ -43,10 +43,10 @@
                 <div class="form-group col-md-4">
                     <label class="col-form-label" for="sltSexo">Sexo</label>
                     <select class="form-control" id="sltSexo" name="sltSexo">
-                        <option>Selecione o sexo</option>
-                        <option>Feminino</option>
-                        <option>Masculino</option>
-                        <option>Outro</option>
+                        <option value="DEFAULT">Selecione o sexo</optionV>
+                        <option value="FEMININO">Feminino</option>
+                        <option value="MASCULINO">Masculino</option>
+                        <option value="OUTRO">Outro</option>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
@@ -88,7 +88,7 @@
                 <div class="form-group col-md-4">
                     <label class="col-form-label" for="sltEstadoCivil">Estado civil</label>
                     <select class="form-control" id="sltEstadoCivil" name="sltEstadoCivil">
-                        <option value="" selected="selected">Selecione o estado civil</option>
+                        <option value="DEFAULT" selected="selected">Selecione o estado civil</option>
                         <option value="CASADO">Casado</option>
                         <option value="SOLTEIRO">Solteiro</option>
                         <option value="DIVORCIADO">Divorciado</option>
@@ -125,9 +125,15 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-12">
                     <label for="txtEnderecoLogradouro" class="col-form-label">Logradouro</label>
                     <input type="text" class="form-control" id="txtEnderecoLogradouro" name="txtEnderecoLogradouro" placeholder="Rua da colina dos exemplos" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="txtEnderecoBairro" class="col-form-label">Bairro</label>
+                    <input type="text" class="form-control" id="txtEnderecoBairro" name="txtEnderecoBairro" placeholder="Bairro dos exemplos" required>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="txtEnderecoNumero" class="col-form-label">Número</label>

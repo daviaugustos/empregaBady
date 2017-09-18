@@ -46,21 +46,18 @@ class CreateColumnsCandidatos extends Migration
             $table->string('nomeEmpresa1');
             $table->date('dataAdmissao1');
             $table->date('dataSaida1');
-            $table->string('motivoSaida1');
             $table->string('cargo1');
             $table->string('atividadesRealizadas1');
 
             $table->string('nomeEmpresa2');
             $table->date('dataAdmissao2');
             $table->date('dataSaida2');
-            $table->string('motivoSaida2');
             $table->string('cargo2');
             $table->string('atividadesRealizadas2');
 
             $table->string('nomeEmpresa3');
             $table->date('dataAdmissao3');
             $table->date('dataSaida3');
-            $table->string('motivoSaida3');
             $table->string('cargo3');
             $table->string('atividadesRealizadas3');
 
