@@ -54,7 +54,7 @@ class HomeController extends Controller
             'txtEnderecoNumero' => 'required|max:6',
             'txtEnderecoComplemento' => 'nullable',
             'sltEscolaridade' => 'required',
-            'txtCnhCategorias' => 'required|max:8',
+            'txtCnhCategorias' => 'max:8',
             'txtCursos' => 'nullable',
             'txtCargoPretendido1' => 'required|min:5',
             'txtCargoPretendido2' => 'required|min:5',

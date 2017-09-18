@@ -124,6 +124,8 @@ class CreateColumnsCandidatos extends Migration
             $table->dropColumn('cargoPretendido1');
             $table->dropColumn('cargoPretendido2');
             $table->dropColumn('cargoPretendido3');
+
+            $table->dropColumn('primeiroEmprego');
         });
     }
 }
