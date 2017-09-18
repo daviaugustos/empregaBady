@@ -64,6 +64,8 @@ class CreateColumnsCandidatos extends Migration
             $table->string('cargoPretendido1');
             $table->string('cargoPretendido2');
             $table->string('cargoPretendido3');
+
+            $table->boolean('primeiroEmprego');
         });
     }
 
