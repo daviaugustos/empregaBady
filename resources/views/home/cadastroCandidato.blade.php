@@ -188,78 +188,87 @@
         </fieldset>
         <fieldset class="form-group">
             <legend>Histórico profissional</legend>
-            <!-- Empresa 1 -->
             <div class="form-group">
-                <label for="txtNomeEmpresa1" class="col-form-label">Nome da empresa 1</label>
-                <input type="text" class="form-control" id="txtNomeEmpresa1" name="txtNomeEmpresa1" value="{{ old('txtNomeEmpresa1')}}" placeholder="Empresa Exemplo Exemplista">
-            </div>        
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="txtDataAdmissao1" class="col-form-label">Data de admissão</label>
-                    <input type="text" class="form-control" id="txtDataAdmissao1" name="txtDataAdmissao1" value="{{ old('txtDataAdmissao1')}}" placeholder="DD/MM/AAAA">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="txtDataSaida1" class="col-form-label">Data de saída</label>
-                    <input type="text" class="form-control" id="txtDataSaida1" name="txtDataSaida1" value="{{ old('txtDataSaida1')}}" placeholder="DD/MM/AAAA">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="txtCargo1" class="col-form-label">Cargo</label>
-                <input type="text" class="form-control" id="txtCargo1" name="txtCargo1" value="{{ old('txtCargo1')}}" placeholder="Empacotador de exemplos">
+                <label class="form-check-label">
+                    <input type="checkbox" id="chkPrimeiroEmprego" class="form-check-input">
+                    Estou em busca de meu primeiro emprego!
+                </label>
             </div> 
-            <div class="form-group">
-                <label for="txtAtividadesRealizadas1">Atividades realizadas</label>
-                <textarea style="resize: none;" class="form-control" id="txtAtividadesRealizadas1" value="{{ old('txtAtividadesRealizadas1')}}" name="txtAtividadesRealizadas1" rows="4"></textarea>
-            </div>
+            <div id="historicoProfissionalEmpresas">
+                <!-- Empresa 1 -->
+                <div class="form-group">
+                    <label for="txtNomeEmpresa1" class="col-form-label">Nome da empresa 1</label>
+                    <input type="text" class="form-control" id="txtNomeEmpresa1" name="txtNomeEmpresa1" value="{{ old('txtNomeEmpresa1')}}" placeholder="Empresa Exemplo Exemplista">
+                </div>        
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="txtDataAdmissao1" class="col-form-label">Data de admissão</label>
+                        <input type="text" class="form-control" id="txtDataAdmissao1" name="txtDataAdmissao1" value="{{ old('txtDataAdmissao1')}}" placeholder="DD/MM/AAAA">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="txtDataSaida1" class="col-form-label">Data de saída</label>
+                        <input type="text" class="form-control" id="txtDataSaida1" name="txtDataSaida1" value="{{ old('txtDataSaida1')}}" placeholder="DD/MM/AAAA">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtCargo1" class="col-form-label">Cargo</label>
+                    <input type="text" class="form-control" id="txtCargo1" name="txtCargo1" value="{{ old('txtCargo1')}}" placeholder="Empacotador de exemplos">
+                </div> 
+                <div class="form-group">
+                    <label for="txtAtividadesRealizadas1">Atividades realizadas</label>
+                    <textarea style="resize: none;" class="form-control" id="txtAtividadesRealizadas1" value="{{ old('txtAtividadesRealizadas1')}}" name="txtAtividadesRealizadas1" rows="4"></textarea>
+                </div>
 
-            <!-- Empresa 2 -->
-            <div class="form-group">
-                <label for="txtNomeEmpresa2" class="col-form-label">Nome da empresa 2</label>
-                <input type="text" class="form-control" id="txtNomeEmpresa2" name="txtNomeEmpresa2" value="{{ old('txtNomeEmpresa2')}}" placeholder="Empresa Exemplo Exemplista">
-            </div>        
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="txtDataEmissao2" class="col-form-label">Data de admissão</label>
-                    <input type="text" class="form-control" id="txtDataEmissao2" name="txtDataEmissao2" value="{{ old('txtDataEmissao2')}}" placeholder="DD/MM/AAAA" required>
+                <!-- Empresa 2 -->
+                <div class="form-group">
+                    <label for="txtNomeEmpresa2" class="col-form-label">Nome da empresa 2</label>
+                    <input type="text" class="form-control" id="txtNomeEmpresa2" name="txtNomeEmpresa2" value="{{ old('txtNomeEmpresa2')}}" placeholder="Empresa Exemplo Exemplista">
+                </div>        
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="txtDataEmissao2" class="col-form-label">Data de admissão</label>
+                        <input type="text" class="form-control" id="txtDataEmissao2" name="txtDataEmissao2" value="{{ old('txtDataEmissao2')}}" placeholder="DD/MM/AAAA" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="txtDataSaida2" class="col-form-label">Data de saída</label>
+                        <input type="text" class="form-control" id="txtDataSaida2" name="txtDataSaida2" value="{{ old('txtDataSaida2')}}" placeholder="DD/MM/AAAA" required>
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="txtDataSaida2" class="col-form-label">Data de saída</label>
-                    <input type="text" class="form-control" id="txtDataSaida2" name="txtDataSaida2" value="{{ old('txtDataSaida2')}}" placeholder="DD/MM/AAAA" required>
+                <div class="form-group">
+                    <label for="txtCargo2" class="col-form-label">Cargo</label>
+                    <input type="text" class="form-control" id="txtCargo2" name="txtCargo2" value="{{ old('txtCargo2')}}" placeholder="Empacotador de exemplos">
+                </div> 
+                <div class="form-group">
+                    <label for="txtAtividadesRealizadas2">Atividades realizadas</label>
+                    <textarea style="resize: none;" class="form-control" id="txtAtividadesRealizadas2" value="{{ old('txtAtividadesRealizadas2')}}" name="txtAtividadesRealizadas2" rows="4"></textarea>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="txtCargo2" class="col-form-label">Cargo</label>
-                <input type="text" class="form-control" id="txtCargo2" name="txtCargo2" value="{{ old('txtCargo2')}}" placeholder="Empacotador de exemplos">
-            </div> 
-            <div class="form-group">
-                <label for="txtAtividadesRealizadas2">Atividades realizadas</label>
-                <textarea style="resize: none;" class="form-control" id="txtAtividadesRealizadas2" value="{{ old('txtAtividadesRealizadas2')}}" name="txtAtividadesRealizadas2" rows="4"></textarea>
-            </div>
 
-            <!-- Empresa 3 -->
-            <div class="form-group">
-                <label for="txtNomeEmpresa3" class="col-form-label">Nome da empresa 3</label>
-                <input type="text" class="form-control" id="txtNomeEmpresa3" name="txtNomeEmpresa3" value="{{ old('txtNomeEmpresa3')}}" placeholder="Empresa Exemplo Exemplista">
-            </div>        
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="txtDataEmissao3" class="col-form-label">Data de admissão</label>
-                    <input type="text" class="form-control" id="txtDataEmissao3" name="txtDataEmissao3" value="{{ old('txtDataEmissao3')}}" placeholder="DD/MM/AAAA" required>
+                <!-- Empresa 3 -->
+                <div class="form-group">
+                    <label for="txtNomeEmpresa3" class="col-form-label">Nome da empresa 3</label>
+                    <input type="text" class="form-control" id="txtNomeEmpresa3" name="txtNomeEmpresa3" value="{{ old('txtNomeEmpresa3')}}" placeholder="Empresa Exemplo Exemplista">
+                </div>        
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="txtDataEmissao3" class="col-form-label">Data de admissão</label>
+                        <input type="text" class="form-control" id="txtDataEmissao3" name="txtDataEmissao3" value="{{ old('txtDataEmissao3')}}" placeholder="DD/MM/AAAA" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="txtDataSaida3" class="col-form-label">Data de saída</label>
+                        <input type="text" class="form-control" id="txtDataSaida3" name="txtDataSaida3" value="{{ old('txtDataSaida3')}}" placeholder="DD/MM/AAAA" required>
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="txtDataSaida3" class="col-form-label">Data de saída</label>
-                    <input type="text" class="form-control" id="txtDataSaida3" name="txtDataSaida3" value="{{ old('txtDataSaida3')}}" placeholder="DD/MM/AAAA" required>
+                <div class="form-group">
+                    <label for="txtCargo3" class="col-form-label">Cargo</label>
+                    <input type="text" class="form-control" id="txtCargo3" name="txtCargo3" value="{{ old('txtCargo3')}}" placeholder="Empacotador de exemplos">
+                </div>  
+                <div class="form-group">
+                    <label for="txtAtividadesRealizadas3">Atividades realizadas</label>
+                    <textarea style="resize: none;" class="form-control" id="txtAtividadesRealizadas3" value="{{ old('txtAtividadesRealizadas3')}}" name="txtAtividadesRealizadas3" rows="4"></textarea>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="txtCargo3" class="col-form-label">Cargo</label>
-                <input type="text" class="form-control" id="txtCargo3" name="txtCargo3" value="{{ old('txtCargo3')}}" placeholder="Empacotador de exemplos">
-            </div>  
-            <div class="form-group">
-                <label for="txtAtividadesRealizadas3">Atividades realizadas</label>
-                <textarea style="resize: none;" class="form-control" id="txtAtividadesRealizadas3" value="{{ old('txtAtividadesRealizadas3')}}" name="txtAtividadesRealizadas3" rows="4"></textarea>
-            </div>
             
+
+            </div> 
         </fieldset>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>
