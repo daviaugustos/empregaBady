@@ -190,7 +190,7 @@
             <legend>Histórico profissional</legend>
             <div class="form-group">
                 <label class="form-check-label">
-                    <input type="checkbox" id="chkPrimeiroEmprego" class="form-check-input">
+                    <input type="checkbox" id="chkPrimeiroEmprego" name="chkPrimeiroEmprego" class="form-check-input">
                     Estou em busca de meu primeiro emprego!
                 </label>
             </div> 
