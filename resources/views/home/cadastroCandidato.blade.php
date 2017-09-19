@@ -10,7 +10,7 @@
             </ul>
         </div>
     @endif
-    <form method="POST" action="{{ route('salvarEmpresaPost') }}">
+    <form method="POST" action="{{ route('salvarCandidato') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <fieldset class="form-group">
             <legend>Dados para acesso</legend>
@@ -99,10 +99,10 @@
                         <option {{ (old('sltEstadoCivil') == 'OUTROS' ? 'selected':'') }}>Outros</option>
                     </select>
                 </div>  
-            </div>
-            <div class="form-group">
-                <label for="txtQuantidadeFilhos" class="col-form-label">Quantidade de filhos</label>
-                <input type="number" class="form-control" id="txtQuantidadeFilhos" name="txtQuantidadeFilhos" value="{{ old('txtQuantidadeFilhos')}}" placeholder="2">
+                <div class="form-group">
+                    <label for="txtQuantidadeFilhos" class="col-form-label">Quantidade de filhos</label>
+                    <input type="number" class="form-control" id="txtQuantidadeFilhos" name="txtQuantidadeFilhos" value="{{ old('txtQuantidadeFilhos')}}" placeholder="2">
+                </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
@@ -227,11 +227,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="txtDataEmissao2" class="col-form-label">Data de admissão</label>
-                        <input type="text" class="form-control" id="txtDataEmissao2" name="txtDataEmissao2" value="{{ old('txtDataEmissao2')}}" placeholder="DD/MM/AAAA" required>
+                        <input type="text" class="form-control" id="txtDataEmissao2" name="txtDataEmissao2" value="{{ old('txtDataEmissao2')}}" placeholder="DD/MM/AAAA" >
                     </div>
                     <div class="form-group col-md-6">
                         <label for="txtDataSaida2" class="col-form-label">Data de saída</label>
-                        <input type="text" class="form-control" id="txtDataSaida2" name="txtDataSaida2" value="{{ old('txtDataSaida2')}}" placeholder="DD/MM/AAAA" required>
+                        <input type="text" class="form-control" id="txtDataSaida2" name="txtDataSaida2" value="{{ old('txtDataSaida2')}}" placeholder="DD/MM/AAAA" >
                     </div>
                 </div>
                 <div class="form-group">
@@ -251,11 +251,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="txtDataEmissao3" class="col-form-label">Data de admissão</label>
-                        <input type="text" class="form-control" id="txtDataEmissao3" name="txtDataEmissao3" value="{{ old('txtDataEmissao3')}}" placeholder="DD/MM/AAAA" required>
+                        <input type="text" class="form-control" id="txtDataEmissao3" name="txtDataEmissao3" value="{{ old('txtDataEmissao3')}}" placeholder="DD/MM/AAAA" >
                     </div>
                     <div class="form-group col-md-6">
                         <label for="txtDataSaida3" class="col-form-label">Data de saída</label>
-                        <input type="text" class="form-control" id="txtDataSaida3" name="txtDataSaida3" value="{{ old('txtDataSaida3')}}" placeholder="DD/MM/AAAA" required>
+                        <input type="text" class="form-control" id="txtDataSaida3" name="txtDataSaida3" value="{{ old('txtDataSaida3')}}" placeholder="DD/MM/AAAA" >
                     </div>
                 </div>
                 <div class="form-group">

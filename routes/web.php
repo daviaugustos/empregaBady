@@ -9,13 +9,14 @@ Route::get('/vagas', 'HomeController@vagasView')
 Route::get('/empresa/cadastro', 'HomeController@cadastroEmpresaView')
     ->name('cadastroEmpresaView');
 
-Route::post('/empresa/salvar-cadastro', 'HomeController@salvarEmpresa')
-    ->name('salvarEmpresaPost');
+//Route::post('/empresa/salvar-cadastro', 'HomeController@salvarEmpresa')
+    //->name('salvarEmpresa');
 
 Route::get('/candidato/cadastro', 'HomeController@cadastroCandidatoView')
     ->name('cadastroCandidatoView');
 
-// Route::post('/candidato/salvar-cadastro', 'HomeController@salvarCandidato');
+Route::post('/candidato/salvar-cadastro', 'HomeController@salvarCandidato')
+    ->name('salvarCandidato');
 
 Route::get('/empresa/entrar', 'HomeController@empresaLoginView')
     ->name('/empresaLoginView');
