@@ -13,7 +13,7 @@ class CreateColumnsCandidatos extends Migration
      */
     public function up()
     {
-        Schema::table('candidatos', function (BluePrint $table){
+        Schema::table('candidatos', function (Blueprint $table){
             //Dados pessoais
             $table->string('email');
             $table->string('senha');
@@ -76,7 +76,7 @@ class CreateColumnsCandidatos extends Migration
      */
     public function down()
     {
-        Schema::table('candidatos', function (BluePrint $table){
+        Schema::table('candidatos', function (Blueprint $table){
             $table->dropColumn('email');
             $table->dropColumn('senha');
             $table->dropColumn('nome');

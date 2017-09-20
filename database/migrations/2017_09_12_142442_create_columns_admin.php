@@ -13,7 +13,7 @@ class CreateColumnsAdmin extends Migration
      */
     public function up()
     {
-        Schema::table('admins', function (BluePrint $table){ 
+        Schema::table('admins', function (Blueprint $table){ 
             $table->string('nome');
             $table->string('email');
             $table->string('senha');
@@ -27,7 +27,7 @@ class CreateColumnsAdmin extends Migration
      */
     public function down()
     {
-        Schema::table('admins', function (BluePrint $table){ 
+        Schema::table('admins', function (Blueprint $table){ 
             $table->dropColumn('nome');
             $table->dropColumn('email');
             $table->dropColumn('senha');

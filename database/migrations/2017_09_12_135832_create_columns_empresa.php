@@ -13,7 +13,7 @@ class CreateColumnsEmpresa extends Migration
      */
     public function up()
     {
-        Schema::table('empresas', function (BluePrint $table){
+        Schema::table('empresas', function (Blueprint $table){
             $table->string('email');
             $table->string('senha');
             $table->string('empregadorNome');
@@ -41,21 +41,23 @@ class CreateColumnsEmpresa extends Migration
      */
     public function down()
     {
-        $table->dropColumn('email');
-        $table->dropColumn('senha');
-        $table->dropColumn('empregadorNome');
-        $table->dropColumn('empregadorCpf');
-        $table->dropColumn('empregadorTelefone');
-        $table->dropColumn('empregadorCelular');
-        $table->dropColumn('contatoNome');
-        $table->dropColumn('contatoTelefone');
-        $table->dropColumn('cidade');
-        $table->dropColumn('estado');
-        $table->dropColumn('razaoSocial');
-        $table->dropColumn('cnpj');
-        $table->dropColumn('nomeFantasia');
-        $table->dropColumn('inscricaoMunicipal');
-        $table->dropColumn('inscricaoEstadual');
-        $table->dropColumn('descricaoEmpresa');
+        Schema::table('empresas', function (Blueprint $table){
+            $table->dropColumn('email');
+            $table->dropColumn('senha');
+            $table->dropColumn('empregadorNome');
+            $table->dropColumn('empregadorCpf');
+            $table->dropColumn('empregadorTelefone');
+            $table->dropColumn('empregadorCelular');
+            $table->dropColumn('contatoNome');
+            $table->dropColumn('contatoTelefone');
+            $table->dropColumn('cidade');
+            $table->dropColumn('estado');
+            $table->dropColumn('razaoSocial');
+            $table->dropColumn('cnpj');
+            $table->dropColumn('nomeFantasia');
+            $table->dropColumn('inscricaoMunicipal');
+            $table->dropColumn('inscricaoEstadual');
+            $table->dropColumn('descricaoEmpresa');
+        });
     }
 }
