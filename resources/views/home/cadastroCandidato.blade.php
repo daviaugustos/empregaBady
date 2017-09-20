@@ -112,15 +112,15 @@
                 <div class="form-group col-md-3">
                     <label class="col-form-label" for="sltEnderecoEstado">Estado</label>
                     <select class="form-control" id="sltEnderecoEstado" name="sltEnderecoEstado">
-                        <option value="" selected="selected">Selecione o estado</option>
-                        <option {{ (old('sltEnderecoEstado') == '1' ? 'selected':'') }}>São Paulo</option>
+                        <option value="">Selecione o estado</option>
+                        <option value="1" {{ (old('sltEnderecoEstado') == '1' ? 'selected':'') }}>São Paulo</option>
                     </select> 
                 </div>
                 <div class="form-group col-md-6">
                     <label class="col-form-label" for="sltEnderecoCidade">Cidade</label>
                     <select class="form-control" id="sltEnderecoCidade" name="sltEnderecoCidade">
-                        <option value="" selected="selected">Selecione a cidade</option>
-                        <option {{ (old('sltEnderecoCidade') == '1' ? 'selected':'') }}>Bady Bassitt</option>
+                        <option value="">Selecione a cidade</option>
+                        <option value="1" {{ (old('sltEnderecoCidade') == '1' ? 'selected':'') }}>Bady Bassitt</option>
                     </select> 
                 </div>
             </div>
@@ -226,8 +226,8 @@
                 </div>        
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="txtDataEmissao2" class="col-form-label">Data de admissão</label>
-                        <input type="text" class="form-control" id="txtDataEmissao2" name="txtDataEmissao2" value="{{ old('txtDataEmissao2')}}" placeholder="DD/MM/AAAA" >
+                        <label for="txtDataAdmissao2" class="col-form-label">Data de admissão</label>
+                        <input type="text" class="form-control" id="txtDataAdmissao2" name="txtDataAdmissao2" value="{{ old('txtDataAdmissao2')}}" placeholder="DD/MM/AAAA" >
                     </div>
                     <div class="form-group col-md-6">
                         <label for="txtDataSaida2" class="col-form-label">Data de saída</label>
@@ -250,8 +250,8 @@
                 </div>        
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="txtDataEmissao3" class="col-form-label">Data de admissão</label>
-                        <input type="text" class="form-control" id="txtDataEmissao3" name="txtDataEmissao3" value="{{ old('txtDataEmissao3')}}" placeholder="DD/MM/AAAA" >
+                        <label for="txtDataAdmissao3" class="col-form-label">Data de admissão</label>
+                        <input type="text" class="form-control" id="txtDataAdmissao3" name="txtDataAdmissao3" value="{{ old('txtDataAdmissao3')}}" placeholder="DD/MM/AAAA" >
                     </div>
                     <div class="form-group col-md-6">
                         <label for="txtDataSaida3" class="col-form-label">Data de saída</label>

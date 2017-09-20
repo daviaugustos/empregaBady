@@ -67,12 +67,12 @@ class HomeController extends Controller
             'txtCargo1' => 'nullable',
             'txtAtividadesRealizadas1' => 'nullable',
             'txtNomeEmpresa2' => 'nullable',
-            'txtDataEmissao2' => 'nullable|max:10',
+            'txtDataAdmissao2' => 'nullable|max:10',
             'txtDataSaida2' => 'nullable|max:10',
             'txtCargo2' => 'nullable',
             'txtAtividadesRealizadas2' => 'nullable',
             'txtNomeEmpresa3' => 'nullable',
-            'txtDataEmissao3' => 'nullable|max:10',
+            'txtDataAdmissao3' => 'nullable|max:10',
             'txtDataSaida3' => 'nullable|max:10',
             'txtCargo3' => 'nullable',
             'txtAtividadesRealizadas3' => 'nullable'
@@ -101,8 +101,8 @@ class HomeController extends Controller
         $novoCandidato->enderecoNumero = $request->txtEnderecoNumero;
         $novoCandidato->enderecoComplemento = $request->txtEnderecoComplemento;
         $novoCandidato->enderecoBairro = $request->txtEnderecoBairro;
-        $novoCandidato->enderecoCidade = $request->txtEnderecoCidade;
-        $novoCandidato->enderecoEstado = $request->txtEnderecoEstado;
+        $novoCandidato->enderecoCidade = $request->sltEnderecoEstado;
+        $novoCandidato->enderecoEstado = $request->sltEnderecoCidade;
 
         $novoCandidato->nomeEmpresa1 = $request->txtNomeEmpresa1;
         $novoCandidato->dataAdmissao1 = $request->txtDataAdmissao1;
@@ -111,13 +111,13 @@ class HomeController extends Controller
         $novoCandidato->atividadesRealizadas1 = $request->txtAtividadesRealizadas1;
 
         $novoCandidato->nomeEmpresa2 = $request->txtNomeEmpresa2;
-        $novoCandidato->dataAdmissao2 = $request->txtDataEmissao2;
+        $novoCandidato->dataAdmissao2 = $request->txtDataAdmissao2;
         $novoCandidato->dataSaida2 = $request->txtDataSaida2;
         $novoCandidato->cargo2 = $request->txtCargo2;
         $novoCandidato->atividadesRealizadas2 = $request->txtAtividadesRealizadas2;
 
         $novoCandidato->nomeEmpresa3 = $request->txtNomeEmpresa3;
-        $novoCandidato->dataAdmissao3 = $request->txtDataEmissao3;
+        $novoCandidato->dataAdmissao3 = $request->txtDataAdmissao3;
         $novoCandidato->dataSaida3 = $request->txtDataSaida3;
         $novoCandidato->cargo3 = $request->txtCargo3;
         $novoCandidato->atividadesRealizadas3 = $request->txtAtividadesRealizadas3;
