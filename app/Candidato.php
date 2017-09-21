@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Candidato extends Model
 {   
@@ -46,5 +47,15 @@ class Candidato extends Model
 
     function setPrimeiroEmpregoAttribute($value){
         $this->attributes['primeiroEmprego'] = ($value === "on") ? 1 : 0;
+    }
+
+    function setSenhaAttribute($value){
+        $this->attributes['senha'] = bcrypt($value);
+    }
+
+    function validarLogin($email, $senha){
+        $candidatoDados =   DB::table('candidatos')
+                                ->where('email', '=', $email)
+                                ->get();
     }
 }
