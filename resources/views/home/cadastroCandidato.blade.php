@@ -33,17 +33,17 @@
             <legend>Dados pessoais</legend>
             <div class="form-group">
                 <label for="txtNome" class="col-form-label">Nome</label>
-                <input type="text" class="form-control" id="txtNome" name="txtNome" value="{{ old('txtNome')}}" placeholder="Nome completo">
+                <input type="text" class="form-control" id="txtNome" name="txtNome" value="{{ old('txtNome')}}" placeholder="Nome completo" required>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="txtCpf" class="col-form-label">CPF</label>
-                    <input type="text" class="form-control" id="txtCpf" name="txtCpf" value="{{ old('txtCpf')}}" placeholder="Informe seu CPF">            
+                    <input type="text" class="form-control" id="txtCpf" name="txtCpf" value="{{ old('txtCpf')}}" placeholder="Informe seu CPF" required>            
                 </div>
                 <div class="form-group col-md-4">
                     <label class="col-form-label" for="sltSexo">Sexo</label>
-                    <select class="form-control" id="sltSexo" name="sltSexo">
-                        <option value="DEFAULT">Selecione o sexo</optionV>
+                    <select class="form-control" id="sltSexo" name="sltSexo" required>
+                        <option value="">Selecione o sexo</option>
                         <option {{ (old('sltSexo') == 'FEMININO' ? 'selected':'') }}>Feminino</option>
                         <option {{ (old('sltSexo') == 'MASCULINO' ? 'selected':'') }}>Masculino</option>
                         <option {{ (old('sltSexo') == 'OUTRO' ? 'selected':'') }}>Outro</option>
@@ -87,8 +87,8 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label class="col-form-label" for="sltEstadoCivil">Estado civil</label>
-                    <select class="form-control" id="sltEstadoCivil" name="sltEstadoCivil">
-                        <option value="DEFAULT" selected>Selecione o estado civil</option>
+                    <select class="form-control" id="sltEstadoCivil" name="sltEstadoCivil" required>
+                        <option value="" selected>Selecione o estado civil</option>
                         <option {{ (old('sltEstadoCivil') == 'CASADO' ? 'selected':'') }}>Casado</option>
                         <option {{ (old('sltEstadoCivil') == 'SOLTEIRO' ? 'selected':'') }}>Solteiro</option>
                         <option {{ (old('sltEstadoCivil') == 'DIVORCIADO' ? 'selected':'') }}>Divorciado</option>
@@ -101,24 +101,24 @@
                 </div>  
                 <div class="form-group">
                     <label for="txtQuantidadeFilhos" class="col-form-label">Quantidade de filhos</label>
-                    <input type="number" class="form-control" id="txtQuantidadeFilhos" name="txtQuantidadeFilhos" value="{{ old('txtQuantidadeFilhos')}}" placeholder="2">
+                    <input type="number" class="form-control" id="txtQuantidadeFilhos" name="txtQuantidadeFilhos" value="{{ old('txtQuantidadeFilhos')}}" placeholder="2" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="txtEnderecoCep" class="col-form-label">CEP</label>
-                    <input type="text" class="form-control" id="txtEnderecoCep" name="txtEnderecoCep" value="{{ old('txtEnderecoCep')}}" placeholder="XXXXX-XX">            
+                    <input type="text" class="form-control" id="txtEnderecoCep" name="txtEnderecoCep" value="{{ old('txtEnderecoCep')}}" placeholder="XXXXX-XX" required>            
                 </div>
                 <div class="form-group col-md-3">
                     <label class="col-form-label" for="sltEnderecoEstado">Estado</label>
-                    <select class="form-control" id="sltEnderecoEstado" name="sltEnderecoEstado">
+                    <select class="form-control" id="sltEnderecoEstado" name="sltEnderecoEstado" required>
                         <option value="">Selecione o estado</option>
                         <option value="1" {{ (old('sltEnderecoEstado') == '1' ? 'selected':'') }}>São Paulo</option>
                     </select> 
                 </div>
                 <div class="form-group col-md-6">
                     <label class="col-form-label" for="sltEnderecoCidade">Cidade</label>
-                    <select class="form-control" id="sltEnderecoCidade" name="sltEnderecoCidade">
+                    <select class="form-control" id="sltEnderecoCidade" name="sltEnderecoCidade" required>
                         <option value="">Selecione a cidade</option>
                         <option value="1" {{ (old('sltEnderecoCidade') == '1' ? 'selected':'') }}>Bady Bassitt</option>
                     </select> 
@@ -150,8 +150,8 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label class="col-form-label" for="sltEscolaridade">Escolaridade</label>
-                    <select class="form-control" id="sltEscolaridade" name="sltEscolaridade">
-                        <option>Selecione a escolaridade</option>
+                    <select class="form-control" id="sltEscolaridade" name="sltEscolaridade" required>
+                        <option value="">Selecione a escolaridade</option>
                         <option {{ (old('sltEscolaridade') == 'ANALFABETO' ? 'selected':'') }}>Analfabeto</option>
                         <option {{ (old('sltEscolaridade') == 'FUNDAMENTAL_INCOMPLETO' ? 'selected':'') }}>Fundamental Incompleto</option>
                         <option {{ (old('sltEscolaridade') == 'FUNDAMENTAL_COMPLETO' ? 'selected':'') }}>Fundamental Completo</option>
@@ -166,24 +166,24 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="txtCnhCategorias" class="col-form-label">Categorias CNH</label>
-                    <input type="text" class="form-control" id="txtCnhCategorias" name="txtCnhCategorias" value="{{ old('txtCnhCategorias')}}" placeholder="A B">
+                    <input type="text" class="form-control" id="txtCnhCategorias" name="txtCnhCategorias" value="{{ old('txtCnhCategorias')}}" placeholder="A B" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="txtCursos">Cursos</label>
-                <textarea style="resize: none;" class="form-control" id="txtCursos" name="txtCursos" value="{{ old('txtCursos')}}" rows="4"></textarea>
+                <textarea style="resize: none;" class="form-control" id="txtCursos" name="txtCursos" value="{{ old('txtCursos')}}" rows="4" required></textarea>
             </div>
             <div class="form-group">
                 <label for="txtCargoPretendido1" class="col-form-label">Cargo pretendido 1ª opção</label>
-                <input type="text" class="form-control" id="txtCargoPretendido1" name="txtCargoPretendido1" value="{{ old('txtCargoPretendido1')}}"  placeholder="Empacotador de exemplos">
+                <input type="text" class="form-control" id="txtCargoPretendido1" name="txtCargoPretendido1" value="{{ old('txtCargoPretendido1')}}"  placeholder="Empacotador de exemplos" required>
             </div>  
             <div class="form-group">
                 <label for="txtCargoPretendido2" class="col-form-label">Cargo pretendido 2ª opção</label>
-                <input type="text" class="form-control" id="txtCargoPretendido2" name="txtCargoPretendido2" value="{{ old('txtCargoPretendido2')}}" placeholder="Exemplo de empacotador">
+                <input type="text" class="form-control" id="txtCargoPretendido2" name="txtCargoPretendido2" value="{{ old('txtCargoPretendido2')}}" placeholder="Exemplo de empacotador" required>
             </div>  
             <div class="form-group">
                 <label for="txtCargoPretendido3" class="col-form-label">Cargo pretendido 3ª opção</label>
-                <input type="text" class="form-control" id="txtCargoPretendido3" name="txtCargoPretendido3" value="{{ old('txtCargoPretendido3')}}" placeholder="Exemplista empacotante">
+                <input type="text" class="form-control" id="txtCargoPretendido3" name="txtCargoPretendido3" value="{{ old('txtCargoPretendido3')}}" placeholder="Exemplista empacotante" required>
             </div>
         </fieldset>
         <fieldset class="form-group">
