@@ -43,29 +43,29 @@ class CreateColumnsCandidatos extends Migration
             $table->string('enderecoEstado');
 
             //Dados profissionais
-            $table->string('nomeEmpresa1');
-            $table->date('dataAdmissao1');
-            $table->date('dataSaida1');
-            $table->string('cargo1');
-            $table->string('atividadesRealizadas1');
+            $table->string('nomeEmpresa1')->nullable();
+            $table->date('dataAdmissao1')->nullable();
+            $table->date('dataSaida1')->nullable();
+            $table->string('cargo1')->nullable();
+            $table->string('atividadesRealizadas1')->nullable();
 
-            $table->string('nomeEmpresa2');
-            $table->date('dataAdmissao2');
-            $table->date('dataSaida2');
-            $table->string('cargo2');
-            $table->string('atividadesRealizadas2');
+            $table->string('nomeEmpresa2')->nullable();
+            $table->date('dataAdmissao2')->nullable();
+            $table->date('dataSaida2')->nullable();
+            $table->string('cargo2')->nullable();
+            $table->string('atividadesRealizadas2')->nullable();
 
-            $table->string('nomeEmpresa3');
-            $table->date('dataAdmissao3');
-            $table->date('dataSaida3');
-            $table->string('cargo3');
-            $table->string('atividadesRealizadas3');
+            $table->string('nomeEmpresa3')->nullable();
+            $table->date('dataAdmissao3')->nullable();
+            $table->date('dataSaida3')->nullable();
+            $table->string('cargo3')->nullable();
+            $table->string('atividadesRealizadas3')->nullable();
 
             $table->string('cargoPretendido1');
             $table->string('cargoPretendido2');
             $table->string('cargoPretendido3');
 
-            $table->boolean('primeiroEmprego');
+            $table->boolean('primeiroEmprego')->nullable();
         });
     }
 

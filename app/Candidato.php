@@ -43,4 +43,8 @@ class Candidato extends Model
     function setDataSaida3Attribute($value){
         $this->attributes['dataSaida3'] = $this->convertDateToDataBase($value);
     }
+
+    function setPrimeiroEmpregoAttribute($value){
+        $this->attributes['primeiroEmprego'] = ($value === "on") ? 1 : 0;
+    }
 }
