@@ -1,5 +1,9 @@
 @extends('layouts.menu-assets')
 
+@section('cssCustom')
+    <link rel="stylesheet" href="{{asset('css/cadastroCandidato-custom.css')}}">
+@endsection
+
 @section('pagina')
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -270,6 +274,12 @@
 
             </div> 
         </fieldset>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <div class="form-row espacamento-botao-submit">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+        </div>
     </form>
+@endsection
+@section('scriptCustom')
+    <script src="{{asset('js/cadastroCandidato-custom.js')}}"></script>
+    <script src="{{asset('js/jquery.mask.min.js')}}"></script>
 @endsection
