@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateColumnsCandidatos extends Migration
+class CreateColumnCandidatos extends Migration
 {
     /**
      * Run the migrations.
@@ -15,16 +15,11 @@ class CreateColumnsCandidatos extends Migration
     {
         Schema::table('candidatos', function (Blueprint $table){
             //Dados pessoais
-            $table->string('email');
-            $table->string('senha');
-            $table->string('nome');
             $table->string('cpf');
             $table->string('rg');
             $table->date('dataExpedicao');
             $table->string('sexo');
             $table->date('dataNascimento');
-            $table->string('telefone');
-            $table->string('celular');
             $table->string('nomePai');
             $table->string('nomeMae');
             $table->string('escolaridade');
@@ -39,8 +34,6 @@ class CreateColumnsCandidatos extends Migration
             $table->string('enderecoNumero');
             $table->string('enderecoComplemento');
             $table->string('enderecoBairro');
-            $table->string('enderecoCidade');
-            $table->string('enderecoEstado');
 
             //Dados profissionais
             $table->string('nomeEmpresa1')->nullable();
@@ -77,16 +70,11 @@ class CreateColumnsCandidatos extends Migration
     public function down()
     {
         Schema::table('candidatos', function (Blueprint $table){
-            $table->dropColumn('email');
-            $table->dropColumn('senha');
-            $table->dropColumn('nome');
             $table->dropColumn('cpf');
             $table->dropColumn('rg');
             $table->dropColumn('dataExpedicao');
             $table->dropColumn('sexo');
             $table->dropColumn('dataNascimento');
-            $table->dropColumn('telefone');
-            $table->dropColumn('celular');
             $table->dropColumn('nomePai');
             $table->dropColumn('nomeMae');
             $table->dropColumn('escolaridade');
@@ -99,8 +87,6 @@ class CreateColumnsCandidatos extends Migration
             $table->dropColumn('enderecoNumero');
             $table->dropColumn('enderecoComplemento');
             $table->dropColumn('enderecoBairro');
-            $table->dropColumn('enderecoCidade');
-            $table->dropColumn('enderecoEstado');
 
             $table->dropColumn('nomeEmpresa1');
             $table->dropColumn('dataAdmissao1');
