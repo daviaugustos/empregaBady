@@ -114,7 +114,7 @@ class RegisterController extends Controller
         $dados->nomeEmpregador = "";
         $dados->save();
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
@@ -125,5 +125,9 @@ class RegisterController extends Controller
             'contactable_id' => $dados->id,
             'contactable_type' => 'App\Empresa',
         ]);
+
+        $this->guard()->login($user);
+
+        return redirect($this->redirectPath());
     }
 }
