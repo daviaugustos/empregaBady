@@ -51,7 +51,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/') }}">Home</a></li>
                         @if (!Auth::guest())
-                            <li><a href="{{ route('posts.create') }}">New Article</a></li>
+                            <li><a href="{{ route('vagas.create') }}">New Article</a></li>
                          @endif
                     </ul>
 

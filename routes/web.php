@@ -17,7 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Rota para implementar e criar o form para o cadastro de empresa
 Route::post('/registerEmpresa', 'Auth\RegisterController@registerEmpresa')
     ->name('registerEmpresa');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('users', 'UserController');
+
+Route::resource('roles', 'RoleController');
+
+Route::resource('permissions', 'PermissionController');
+
+Route::resource('vagas', 'VagaController');
