@@ -48,4 +48,13 @@ class User extends Authenticatable
     {
         return $this->contactable_type == Candidato::class;
     }
+
+    public function setPasswordAttribute($password)
+    {   
+        $this->attributes['password'] = bcrypt($password);
+    }
+
 }
+
+
+
