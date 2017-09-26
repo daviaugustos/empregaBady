@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Candidato;
+use App\Empresa;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -97,6 +99,31 @@ class RegisterController extends Controller
             'enderecoEstado' => '1',
             'contactable_id' => $dados->id,
             'contactable_type' => 'App\Candidato',
+        ]);
+    }
+
+    public function registerEmpresa(Request $data){
+        $dados = new Empresa;
+        $dados->razaoSocial = "Coca Cola Indústrias Ltda.";
+        $dados->cnpj = "68.623.590/0001-42";
+        $dados->nomeFantasia = "Coca Cola";
+        $dados->inscricaoMunicipal = "9999999";
+        $dados->inscricaoEstadual = "99999999";
+        $dados->descricao = "Empresa voltada para a indústria de bebidas";
+        $dados->cpf = "";
+        $dados->nomeEmpregador = "";
+        $dados->save();
+
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'telefone' => '173258-3882',
+            'celular' => '17991490943',
+            'enderecoCidade' => '1',
+            'enderecoEstado' => '1',
+            'contactable_id' => $dados->id,
+            'contactable_type' => 'App\Empresa',
         ]);
     }
 }
