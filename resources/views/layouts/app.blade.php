@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'EmpregaBady') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -42,16 +42,16 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'EmpregaBady') }}
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/') }}">Home</a></li>
+                        <li><a href="{{ url('/') }}">Página principal</a></li>
                         @can('Criar vaga')
-                            <li><a href="{{ route('vagas.create') }}">New Article</a></li>
+                            <li><a href="{{ route('vagas.create') }}">Cadastrar Vaga</a></li>
                         @endcan
                     </ul>
 
@@ -59,8 +59,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}">Entrar</a></li>
+                            <li><a href="{{ route('register') }}">Registrar</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -69,11 +69,11 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        @role('Admin Full') {{-- Laravel-permission blade helper --}}
+                                        @role('AdminFull') {{-- Laravel-permission blade helper --}}
                                         <a href="{{ route('permissions.index') }}"><i class="fa fa-btn fa-unlock"></i>Admin</a>
                                         @endrole
                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Sair
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
