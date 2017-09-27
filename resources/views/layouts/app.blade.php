@@ -50,9 +50,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/') }}">Home</a></li>
-                        @if (!Auth::guest())
+                        @can('Criar vaga')
                             <li><a href="{{ route('vagas.create') }}">New Article</a></li>
-                         @endif
+                        @endcan
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -69,8 +69,8 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        @role('Admin') {{-- Laravel-permission blade helper --}}
-                                        <a href="#"><i class="fa fa-btn fa-unlock"></i>Admin</a>
+                                        @role('Admin Full') {{-- Laravel-permission blade helper --}}
+                                        <a href="{{ route('permissions.index') }}"><i class="fa fa-btn fa-unlock"></i>Admin</a>
                                         @endrole
                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Logout

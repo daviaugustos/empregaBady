@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Vaga;
 use Auth;
 use Session;
+use App\Vaga;
 
-class PostController extends Controller {
+class VagaController extends Controller {
 
     public function __construct() {
         $this->middleware(['auth', 'clearance'])->except('index', 'show');

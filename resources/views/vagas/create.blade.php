@@ -10,7 +10,7 @@
         <hr>
 
     {{-- Using the Laravel HTML Form Collective to create our form --}}
-        {{ Form::open(array('route' => 'posts.store')) }}
+        {{ Form::open(array('route' => 'vagas.store')) }}
 
         <div class="form-group">
             {{ Form::label('cargo', 'Cargo') }}
@@ -25,43 +25,43 @@
             {{ Form::text('salario', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('beneficios', 'Quantidade de vagas') }}
+            {{ Form::label('beneficios', 'Benefícios') }}
             {{ Form::text('beneficios', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('local', 'Quantidade de vagas') }}
+            {{ Form::label('local', 'Local de trabalho') }}
             {{ Form::text('local', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('diaSemana', 'Quantidade de vagas') }}
+            {{ Form::label('diaSemana', 'Dias da semana') }}
             {{ Form::text('diaSemana', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('quantidadeVagas', 'Quantidade de vagas') }}
-            {{ Form::text('quantidadeVagas', null, array('class' => 'form-control')) }}
+            {{ Form::label('horario', 'Horário') }}
+            {{ Form::text('horario', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('quantidadeVagas', 'Quantidade de vagas') }}
-            {{ Form::text('quantidadeVagas', null, array('class' => 'form-control')) }}
+            {{ Form::label('faixaEtaria', 'Faixa etária') }}
+            {{ Form::text('faixaEtaria', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('quantidadeVagas', 'Quantidade de vagas') }}
-            {{ Form::text('quantidadeVagas', null, array('class' => 'form-control')) }}
+            {{ Form::label('sexo', 'Sexo') }}
+            {{ Form::text('sexo', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('quantidadeVagas', 'Quantidade de vagas') }}
-            {{ Form::text('quantidadeVagas', null, array('class' => 'form-control')) }}
+            {{ Form::label('tipo', 'Tipo de contratação') }}
+            {{ Form::text('tipo', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('quantidadeVagas', 'Quantidade de vagas') }}
-            {{ Form::text('quantidadeVagas', null, array('class' => 'form-control')) }}
+            {{ Form::label('cnhExigida', 'CNH exigida') }}
+            {{ Form::text('cnhExigida', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::label('quantidadeVagas', 'Quantidade de vagas') }}
-            {{ Form::text('quantidadeVagas', null, array('class' => 'form-control')) }}
+            {{ Form::label('descricao', 'Descrição da vaga') }}
+            {{ Form::text('descricao', null, array('class' => 'form-control')) }}
             <br>
 
-            {{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block')) }}
+            {{ Form::submit('Cadastrar vaga', array('class' => 'btn btn-success btn-lg btn-block')) }}
             {{ Form::close() }}
         </div>
         </div>

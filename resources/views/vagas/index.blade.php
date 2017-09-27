@@ -20,7 +20,7 @@
                     @endforeach
                     </div>
                     <div class="text-center">
-                        {!! $vagas->quantidadeVagas !!}
+                        {!! $vaga->quantidadeVagas !!}
                     </div>
                 </div>
             </div>
