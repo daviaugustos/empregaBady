@@ -21,7 +21,7 @@ class ClearanceMiddleware {
 
         if ($request->is('vagas/create'))//If user is creating a post
          {
-            if (!Auth::user()->hasPermissionTo('Criar Vaga'))
+            if (!Auth::user()->hasPermissionTo('Criar vaga'))
          {
                 abort('401');
             } 
