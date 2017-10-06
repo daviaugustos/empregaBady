@@ -24,7 +24,7 @@ class CreateColumnCandidatos extends Migration
             $table->string('nomeMae');
             $table->string('escolaridade');
             $table->string('cnhCategorias');
-            $table->string('cursos');
+            $table->longText('cursos');
             $table->string('estadoCivil');
             $table->integer('quantidadeFilhos');
 
@@ -40,19 +40,19 @@ class CreateColumnCandidatos extends Migration
             $table->date('dataAdmissao1')->nullable();
             $table->date('dataSaida1')->nullable();
             $table->string('cargo1')->nullable();
-            $table->string('atividadesRealizadas1')->nullable();
+            $table->longText('atividadesRealizadas1')->nullable();
 
             $table->string('nomeEmpresa2')->nullable();
             $table->date('dataAdmissao2')->nullable();
             $table->date('dataSaida2')->nullable();
             $table->string('cargo2')->nullable();
-            $table->string('atividadesRealizadas2')->nullable();
+            $table->longText('atividadesRealizadas2')->nullable();
 
             $table->string('nomeEmpresa3')->nullable();
             $table->date('dataAdmissao3')->nullable();
             $table->date('dataSaida3')->nullable();
             $table->string('cargo3')->nullable();
-            $table->string('atividadesRealizadas3')->nullable();
+            $table->longText('atividadesRealizadas3')->nullable();
 
             $table->string('cargoPretendido1');
             $table->string('cargoPretendido2');

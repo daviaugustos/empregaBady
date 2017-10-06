@@ -67,36 +67,55 @@ class RegisterController extends Controller
     {
 
         $dados = new Candidato;
-        $dados->cpf = "445.211.478-44";
-        $dados->rg = "49.659.203-8";
-        $dados->dataExpedicao = "2015-05-09";
-        $dados->sexo = "MASCULINO";
-        $dados->dataNascimento = "1997-05-09";
-        $dados->nomePai = "Alexandre Correa dos Santos";
-        $dados->nomeMae = "Sonia Regina Leme da Silva";
-        $dados->escolaridade = "SUPERIOR_INCOMPLETO";
-        $dados->cnhCategorias = "A";
-        $dados->cursos = "vários cursos";
-        $dados->estadoCivil = "SOLTEIRO";
-        $dados->quantidadeFilhos = 0;
-        $dados->enderecoCep = "15115-000";
-        $dados->enderecoLogradouro = "Rua Antônio Marques de Mendonça";
-        $dados->enderecoNumero = "201";
-        $dados->enderecoComplemento = "casa da frente";
-        $dados->enderecoBairro = "Colina Sul 1";
-        $dados->cargoPretendido1 = "Programador";
-        $dados->cargoPretendido2 = "Analista de TI";
-        $dados->cargoPretendido3 = "Suporte";
+        $dados->cpf = $data['cpf'];
+        $dados->rg = $data['rg'];
+        $dados->dataExpedicao = $data['dataExpedicao'];
+        $dados->sexo = $data['sexo'];
+        $dados->dataNascimento = $data['dataNascimento'];
+        $dados->nomePai = $data['nomePai'];
+        $dados->nomeMae = $data['nomeMae'];
+        $dados->escolaridade = $data['escolaridade'];
+        $dados->cnhCategorias = $data['cnhCategorias'];
+        $dados->cursos = $data['cursos'];
+        $dados->estadoCivil = $data['estadoCivil'];
+        $dados->quantidadeFilhos = $data['quantidadeFilhos'];
+        $dados->enderecoCep = $data['enderecoCep'];
+        $dados->enderecoLogradouro = $data['enderecoLogradouro'];
+        $dados->enderecoNumero = $data['enderecoNumero'];
+        $dados->enderecoComplemento = $data['enderecoComplemento'];
+        $dados->enderecoBairro = $data['enderecoBairro'];
+
+        $dados->nomeEmpresa1 = $data['nomeEmpresa1'];
+        $dados->dataAdmissao1 = $data['dataAdmissao1'];
+        $dados->dataSaida1 = $data['dataSaida1'];
+        $dados->cargo1 = $data['cargo1'];
+        $dados->atividadesRealizadas1 = $data['atividadesRealizadas1'];
+
+        $dados->nomeEmpresa2 = $data['nomeEmpresa2'];
+        $dados->dataAdmissao2 = $data['dataAdmissao2'];
+        $dados->dataSaida2 = $data['dataSaida2'];
+        $dados->cargo2 = $data['cargo2'];
+        $dados->atividadesRealizadas2 = $data['atividadesRealizadas2'];
+
+        $dados->nomeEmpresa3 = $data['nomeEmpresa3'];
+        $dados->dataAdmissao3 = $data['dataAdmissao3'];
+        $dados->dataSaida3 = $data['dataSaida3'];
+        $dados->cargo3 = $data['cargo3'];
+        $dados->atividadesRealizadas3 = $data['atividadesRealizadas3'];
+
+        $dados->cargoPretendido1 = $data['cargoPretendido1'];
+        $dados->cargoPretendido2 = $data['cargoPretendido2'];
+        $dados->cargoPretendido3 = $data['cargoPretendido3'];
         $dados->save();
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => $data['password'],
-            'telefone' => '173258-3882',
-            'celular' => '17991490943',
-            'enderecoCidade' => '1',
-            'enderecoEstado' => '1',
+            'telefone' => $data['telefone'],
+            'celular' => $data['celular'],
+            'enderecoCidade' => $data['enderecoCidade'],
+            'enderecoEstado' => $data['enderecoEstado'],
             'contactable_id' => $dados->id,
             'contactable_type' => 'App\Candidato',
         ]);
