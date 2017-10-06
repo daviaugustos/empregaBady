@@ -15,9 +15,12 @@ Route::get('/', 'VagaController@index');
 
 Auth::routes();
 
+Route::get('/registrarEmpresa', 'Auth\RegisterController@registrarEmpresaView')
+    ->name('registrarEmpresaView');
+
 //Rota para implementar e criar o form para o cadastro de empresa
-Route::post('/registerEmpresa', 'Auth\RegisterController@registerEmpresa')
-    ->name('registerEmpresa');
+Route::post('/salvarEmpresa', 'Auth\RegisterController@salvarEmpresa')
+    ->name('salvarEmpresa');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

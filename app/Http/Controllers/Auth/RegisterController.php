@@ -121,6 +121,10 @@ class RegisterController extends Controller
         ]);
     }
 
+    public function registrarEmpresaView(){
+        return view('auth.registrarEmpresa');
+    }
+
     public function registerEmpresa(Request $data){
         $dados = new Empresa;
         $dados->razaoSocial = "Coca Cola Indústrias Ltda.";
