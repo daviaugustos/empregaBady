@@ -24,3 +24,7 @@ legend
 .espacamento-botao-submit {
     margin-bottom: 2em;
 }
+
+fieldset {
+    margin-bottom: 2em;
+}

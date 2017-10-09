@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('cssCustom')
-    <link rel="stylesheet" href="{{asset('css/cadastroCandidato-custom.css')}}">
+    <link rel="stylesheet" href="{{asset('css/cadastros-custom.css')}}">
 @endsection
 
 @section('content')
