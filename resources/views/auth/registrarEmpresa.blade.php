@@ -46,10 +46,10 @@
                             <div class="col-md-12">
                                 <label for="optradio" class="col-form-label">Tipo de empregador</label>
                                 <div class="radio">
-                                    <label><input type="radio" name="tipoEmpregador">Pessoa física</label>
+                                    <label><input type="radio" name="tipoEmpregador" id="radioPessoaFisica" value="FISICA">Pessoa física</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="tipoEmpregador">Pessoa jurídica</label>
+                                    <label><input type="radio" name="tipoEmpregador" id="radioPessoaJuridica" value="JURIDICA" checked>Pessoa jurídica</label>
                                 </div>
                             </div>
                         </div>
@@ -62,43 +62,47 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label for="razaoSocial" class="col-form-label">Razão social</label>
-                                <input type="text" class="form-control" id="razaoSocial" name="razaoSocial" value="{{ old('razaoSocial')}}" placeholder="Razão social da empresa" required>
+                    <div id="dadosPessoaJuridica">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="razaoSocial" class="col-form-label">Razão social</label>
+                                    <input type="text" class="form-control" id="razaoSocial" name="razaoSocial" value="{{ old('razaoSocial')}}" placeholder="Razão social da empresa" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="cnpj" class="col-form-label">CNPJ</label>
+                                    <input type="text" class="form-control" id="cnpj" name="cnpj" value="{{ old('cnpj')}}" placeholder="CNPJ" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="nomeFantasia" class="col-form-label">Nome fantasia</label>
+                                    <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" value="{{ old('nomeFantasia')}}" placeholder="Nome fantasia" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="inscricaoMunicipal" class="col-form-label">Inscrição municipal</label>
+                                    <input type="text" class="form-control" id="inscricaoMunicipal" name="inscricaoMunicipal" value="{{ old('inscricaoMunicipal')}}" placeholder="Inscrição municipal">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inscricaoEstadual" class="col-form-label">Inscrição estadual</label>
+                                    <input type="text" class="form-control" id="inscricaoEstadual" name="inscricaoEstadual" value="{{ old('inscricaoEstadual')}}" placeholder="Inscrição estadual">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="cnpj" class="col-form-label">CNPJ</label>
-                                <input type="text" class="form-control" id="cnpj" name="cnpj" value="{{ old('cnpj')}}" placeholder="CNPJ" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="nomeFantasia" class="col-form-label">Nome fantasia</label>
-                                <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" value="{{ old('nomeFantasia')}}" placeholder="Nome fantasia" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="inscricaoMunicipal" class="col-form-label">Inscrição municipal</label>
-                                <input type="text" class="form-control" id="inscricaoMunicipal" name="inscricaoMunicipal" value="{{ old('inscricaoMunicipal')}}" placeholder="Inscrição municipal">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="inscricaoEstadual" class="col-form-label">Inscrição estadual</label>
-                                <input type="text" class="form-control" id="inscricaoEstadual" name="inscricaoEstadual" value="{{ old('inscricaoEstadual')}}" placeholder="Inscrição estadual">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <label for="cpf" class="col-form-label">CPF</label>
-                                <input type="text" class="form-control" id="cpf" name="cpf" value="{{ old('cpf')}}" placeholder="Informe seu CPF" required>            
+                    <div id="dadosPessoaFisica">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label for="cpf" class="col-form-label">CPF</label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf" value="{{ old('cpf')}}" placeholder="Informe seu CPF" required>            
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,6 +200,6 @@
 </div>
 @endsection
 @section('scriptCustom')
-    <script src="{{asset('js/cadastroCandidato-custom.js')}}"></script>
+    <script src="{{asset('js/cadastroEmpresa-custom.js')}}"></script>
     <script src="{{asset('js/jquery.mask.min.js')}}"></script>
 @endsection
