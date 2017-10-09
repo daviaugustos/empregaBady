@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container-fluid">         
-    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+    <form class="form-horizontal" method="POST" action="{{ route('salvarEmpresa') }}">
         {{ csrf_field() }}
 
         <fieldset class="col-md-12">
@@ -67,7 +67,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="razaoSocial" class="col-form-label">Razão social</label>
-                                    <input type="text" class="form-control" id="razaoSocial" name="razaoSocial" value="{{ old('razaoSocial')}}" placeholder="Razão social da empresa" required>
+                                    <input type="text" class="form-control" id="razaoSocial" name=" " value="{{ old('razaoSocial')}}" placeholder="Razão social da empresa" >
                                 </div>
                             </div>
                         </div>
@@ -75,11 +75,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="cnpj" class="col-form-label">CNPJ</label>
-                                    <input type="text" class="form-control" id="cnpj" name="cnpj" value="{{ old('cnpj')}}" placeholder="CNPJ" required>
+                                    <input type="text" class="form-control" id="cnpj" name="cnpj" value="{{ old('cnpj')}}" placeholder="CNPJ" >
                                 </div>
                                 <div class="col-md-6">
                                     <label for="nomeFantasia" class="col-form-label">Nome fantasia</label>
-                                    <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" value="{{ old('nomeFantasia')}}" placeholder="Nome fantasia" required>
+                                    <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" value="{{ old('nomeFantasia')}}" placeholder="Nome fantasia" >
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <label for="cpf" class="col-form-label">CPF</label>
-                                    <input type="text" class="form-control" id="cpf" name="cpf" value="{{ old('cpf')}}" placeholder="Informe seu CPF" required>            
+                                    <input type="text" class="form-control" id="cpf" name="cpf" value="{{ old('cpf')}}" placeholder="Informe seu CPF">            
                                 </div>
                             </div>
                         </div>
@@ -135,6 +135,15 @@
                                 </select> 
                             </div>
                         </div>   
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="descricao">Descrição</label>
+                                <textarea style="resize: none;" class="form-control" id="descricao" name="descricao" value="{{ old('descricao')}}" rows="4" required></textarea>
+                            </div>  
+                        </div>
                     </div>
                 </div>
         </fieldset>

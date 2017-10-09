@@ -125,30 +125,31 @@ class RegisterController extends Controller
         return view('auth.registrarEmpresa');
     }
 
-    public function registerEmpresa(Request $data){
+    public function salvarEmpresa(Request $data){
         $dados = new Empresa;
-        $dados->razaoSocial = "Coca Cola Indústrias Ltda.";
-        $dados->cnpj = "68.623.590/0001-42";
-        $dados->nomeFantasia = "Coca Cola";
-        $dados->inscricaoMunicipal = "9999999";
-        $dados->inscricaoEstadual = "99999999";
-        $dados->descricao = "Empresa voltada para a indústria de bebidas";
-        $dados->cpf = "";
-        $dados->nomeEmpregador = "";
+        $dados->razaoSocial = $data['razaoSocial'];
+        $dados->cnpj = $data['cnpj'];
+        $dados->nomeFantasia = $data['nomeFantasia'];
+        $dados->inscricaoMunicipal = $data['inscricaoMunicipal'];
+        $dados->inscricaoEstadual = $data['inscricaoEstadual'];
+        $dados->descricao = $data['descricao'];
+        $dados->cpf = $data['cpf'];
+        $dados->nomeEmpregador = $data['celular'];
         $dados->save();
 
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => $data['password'],
-            'telefone' => '173258-3882',
-            'celular' => '17991490943',
-            'enderecoCidade' => '1',
-            'enderecoEstado' => '1',
+            'telefone' => $data['telefone'],
+            'celular' => $data['celular'],
+            'enderecoCidade' => $data['enderecoCidade'],
+            'enderecoEstado' => $data['enderecoEstado'],
             'contactable_id' => $dados->id,
             'contactable_type' => 'App\Empresa',
         ]);
-
+        $user->assignRole('Empresa');
+        
         $this->guard()->login($user);
 
         return redirect($this->redirectPath());

@@ -51,7 +51,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/') }}">Página principal</a></li>
-                        <li><a href="{{ route('registrarEmpresaView') }}">Cadastrar minha empresa</a></li>
+                        @if (Auth::guest())
+                            <li><a href="{{ route('registrarEmpresaView') }}">Cadastrar minha empresa</a></li>
+                        @endif
                         @can('Criar vaga')
                             <li><a href="{{ route('vagas.create') }}">Cadastrar Vaga</a></li>
                         @endcan
