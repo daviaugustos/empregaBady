@@ -22,6 +22,14 @@ Route::get('/registrar-empresa', 'Auth\RegisterController@registrarEmpresaView')
 Route::post('/salvarEmpresa', 'Auth\RegisterController@salvarEmpresa')
     ->name('salvarEmpresa');
 
+// Route::get('/registrar-candidato', 'Auth\RegisterController@registrarCandidatoView')
+// ->name('registrarCandidatoView');
+
+//Rota para implementar e criar o form para o cadastro de empresa
+Route::post('/salvarCandidato', 'Auth\RegisterController@salvarCandidato')
+    ->name('salvarCandidato');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('users', 'UserController');

@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container-fluid">         
-    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+    <form class="form-horizontal" method="POST" action="{{ route('salvarCandidato') }}">
         {{ csrf_field() }}
 
         <fieldset class="col-md-12">

@@ -63,7 +63,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+    protected function salvarCandidato(Request $data)
     {
 
         $dados = new Candidato;
@@ -108,7 +108,7 @@ class RegisterController extends Controller
         $dados->cargoPretendido3 = $data['cargoPretendido3'];
         $dados->save();
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => $data['password'],
@@ -119,6 +119,11 @@ class RegisterController extends Controller
             'contactable_id' => $dados->id,
             'contactable_type' => 'App\Candidato',
         ]);
+        $user->assignRole('Candidato');
+        
+        $this->guard()->login($user);
+
+        return redirect($this->redirectPath());
     }
 
     public function registrarEmpresaView(){
