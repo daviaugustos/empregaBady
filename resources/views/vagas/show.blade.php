@@ -12,6 +12,9 @@
     <hr>
     {!! Form::open(['method' => 'DELETE', 'route' => ['vagas.destroy', $vaga->id] ]) !!}
     <a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
+    @hasrole('Candidato')
+    <a href="#" class="btn btn-info" role="button">Quero me candidatar</a>
+    @endhasrole
     @can('Editar Vaga')
     <a href="{{ route('vagas.edit', $vaga->id) }}" class="btn btn-info" role="button">Editar</a>
     @endcan
