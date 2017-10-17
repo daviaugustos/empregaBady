@@ -13,8 +13,13 @@
     {!! Form::open(['method' => 'DELETE', 'route' => ['vagas.destroy', $vaga->id] ]) !!}
     <a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
     @hasrole('Candidato')
-    <a href="#" class="btn btn-info" role="button">Quero me candidatar</a>
+    <a href="{{ route('aplicarCandidato', ['id' => Auth::id(), 'idVaga' => $vaga->id ]) }}" class="btn btn-info" role="button">Quero me candidatar</a>
     @endhasrole
+    @if (!Auth::guest())
+        @if(auth()->user()->hasrole('Candidato'))
+            XDDDDDDDDDDDDDDDDDD
+        @endif
+    @endif
     @can('Editar Vaga')
     <a href="{{ route('vagas.edit', $vaga->id) }}" class="btn btn-info" role="button">Editar</a>
     @endcan

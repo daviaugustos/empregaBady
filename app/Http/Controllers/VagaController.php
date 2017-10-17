@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use Auth;
 use Session;
@@ -131,5 +132,15 @@ class VagaController extends Controller {
             ->with('flash_message',
              'Vaga apagada com sucesso!');
 
+    }
+
+    public function aplicarCandidato($idVaga, $idCandidato){
+
+        DB::table('user_vaga')->insert([
+            'user_id' => $idCandidato, 
+            'vaga_id' => $idVaga
+        ]);
+
+        echo "ta salvo";
     }
 }
