@@ -17,7 +17,7 @@
     @endhasrole
     @if (!Auth::guest())
         @if(auth()->user()->hasrole('Candidato'))
-            XDDDDDDDDDDDDDDDDDD
+            {{$queroCandidatarFlag}}
         @endif
     @endif
     @can('Editar Vaga')

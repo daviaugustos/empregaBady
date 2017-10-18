@@ -69,8 +69,18 @@ class VagaController extends Controller {
      */
     public function show($id) {
         $vaga = Vaga::findOrFail($id); //Find post of id = $id
-
-        return view ('vagas.show', compact('vaga'));
+        $userId = Auth::id();
+        
+        $users = DB::table('user_vaga')->where([
+            ['user_id', '=', $userId],
+            ['vaga_id', '=', $id],
+        ])->get();
+        
+        $queroCandidatarFlag = count($users) > 0 ? FALSE : TRUE ; 
+        // $teste = DB::table('vagas')->where('id', '>', 0)->get();
+        
+        print_r($users);
+        //return view ('vagas.show', ['vaga' => $vaga, 'queroCandidatarFlag' => "TEXTEEE"]);
     }
 
     /**
