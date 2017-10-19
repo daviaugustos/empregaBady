@@ -37,4 +37,8 @@ Route::resource('permissions', 'PermissionController');
 
 Route::resource('vagas', 'VagaController');
 
-Route::get('/aplicar-candidato/{idVaga}/{id}', 'VagaController@aplicarCandidato')->name('aplicarCandidato');
+Route::get('/aplicar-candidato/{idVaga}/{id}', 'VagaController@aplicarCandidato')
+    ->name('aplicarCandidato');
+
+Route::get('/minhas-vagas', 'VagaController@minhasVagasView')
+    ->name('minhasVagasView');

@@ -155,4 +155,13 @@ class VagaController extends Controller {
 
         echo "ta salvo";
     }
+
+    public function minhasVagasView(){
+
+        return view('vagas.minhas-vagas');
+    }
+
+    public function recuperarTodasVagas(){
+        return;
+    }
 }
