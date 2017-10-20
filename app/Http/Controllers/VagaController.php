@@ -44,17 +44,30 @@ class VagaController extends Controller {
      */
     public function store(Request $request) { 
 
-    //Validating title and body field
-        $this->validate($request, [
-            'cargo'=>'required|max:100',
-            ]);
+    $this->validate($request, [
+        'cargo'=>'required|max:100',
+    ]);
 
-        // $title = $request['title'];
-        // $body = $request['body'];
+ 
 
-        $vaga = Vaga::create($request->only('cargo', 'quantidadeVagas', 'salario', 'beneficios', 'local', 
-                                            'diaSemana', 'horario', 'faixaEtaria', 'sexo', 'tipo', 'cnhExigida', 'descricao'));
+    // $vaga = Vaga::create($request->only('cargo', 'quantidadeVagas', 'salario', 'beneficios', 'local', 
+    //                                         'diaSemana', 'horario', 'faixaEtaria', 'sexo', 'tipo', 'cnhExigida', 'descricao'));
 
+    $vaga = Vaga::create([
+        'cargo' => $request['cargo'],
+        'quantidadeVagas' => $request['quantidadeVagas'],
+        'salario' => $request['salario'],
+        'beneficios' => $request['beneficios'],
+        'local' => $request['local'],
+        'diaSemana' => $request['diaSemana'],
+        'horario' => $request['horario'],
+        'faixaEtaria' => $request['faixaEtaria'],
+        'sexo' => $request['sexo'],
+        'tipo' => $request['tipo'],
+        'cnhExigida' => $request['cnhExigida'],
+        'descricao' => $request['descricao'],
+        'status' => 'AGUARDANDO ANALISE',
+    ]);
     //Display a successful message upon save
         return redirect()->route('vagas.index')
             ->with('flash_message', 'Vaga para 

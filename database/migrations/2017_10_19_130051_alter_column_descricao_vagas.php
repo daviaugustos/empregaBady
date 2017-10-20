@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateColumnVagas extends Migration
+class AlterColumnDescricaoVagas extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateColumnVagas extends Migration
     public function up()
     {
         Schema::table('vagas', function (Blueprint $table){
-            $table->string('status');
+            $table->longText('descricao')->nullable()->change();
         });
     }
 
@@ -26,7 +26,7 @@ class CreateColumnVagas extends Migration
     public function down()
     {
         Schema::table('vagas', function (Blueprint $table){
-            $table->dropColumn('status');
+            $table->longText('descricao')->nullable(false)->change();
         });
     }
 }
