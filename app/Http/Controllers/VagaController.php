@@ -213,6 +213,9 @@ class VagaController extends Controller {
             $candidatoDados = $queryCandidatoDados->first();
             array_push($arrayCandidatosVaga, $candidatoDados);
         }
-        print_r($arrayCandidatosVaga);
+        $viewBag = [
+            'candidatos' => $arrayCandidatosVaga
+        ];
+        return view('vagas.ver-candidatos', $viewBag);
     }
 }
