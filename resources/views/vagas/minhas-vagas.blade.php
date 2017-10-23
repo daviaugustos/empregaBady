@@ -5,41 +5,32 @@
 
 @section('content')
 
-<div class="col-lg-10 col-lg-offset-1">
-    <h1><i class="fa fa-key"></i>Minhas vagas registradas
-
-    <a href="{{ route('users.index') }}" class="btn btn-default pull-right">Users</a>
-    <a href="{{ route('roles.index') }}" class="btn btn-default pull-right">Roles</a></h1>
-    <hr>
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped">
-
-            <thead>
-                <tr>
-                    <th>Vaga</th>
-                    <th>Operation</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{--  @foreach ($permissions as $permission)  --}}
-                <tr>
-                    <td></td> 
-                    <td>
-                    {{--  <a href="{{ URL::to('permissions/'.$permission->id.'/edit') }}" class="btn btn-info pull-left" style="margin-right: 3px;">Edit</a>
-
-                    {!! Form::open(['method' => 'DELETE', 'route' => ['permissions.destroy', $permission->id] ]) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                    {!! Form::close() !!}  --}}
-
-                    </td>
-                </tr>
-                {{--  @endforeach  --}}
-            </tbody>
-        </table>
-    </div>
-
-    <a href="{{ URL::to('permissions/create') }}" class="btn btn-success">Add Permission</a>
-
-</div>
-
+<div class="table-responsive">
+  <h2>Minhas vagas</h2>           
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Cargo</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($vagas as $vaga)
+        <tr>
+          <td class="col-md-6">{{$vaga->cargo}}</td>
+          <td class="col-md-2">{{$vaga->status}}</td>
+          <td class="col-md-2"><a class="btn btn-info pull-left" style="margin-right: 3px;">Ver candidatos</a></td>
+          @if($vaga->status != "FECHADA")
+              <td class="col-md-2">
+                <a href="{{ route('fecharVaga', $vaga->id) }}" class="btn btn-info pull-left" style="margin-right: 3px;">
+                  Fechar vaga
+                </a>
+              </td>
+          @endif
+        </tr>  
+      @endforeach
+    </tbody>
+  </table>
 @endsection

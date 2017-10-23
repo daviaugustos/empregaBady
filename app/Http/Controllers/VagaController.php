@@ -170,11 +170,24 @@ class VagaController extends Controller {
     }
 
     public function minhasVagasView(){
-
-        return view('vagas.minhas-vagas');
+        $vagas = Vaga::all(); 
+        $viewBag = [
+            'vagas' => $vagas
+        ];
+        return view('vagas.minhas-vagas', $viewBag);
     }
 
     public function recuperarTodasVagas(){
         return;
+    }
+
+    public function fecharVaga($idVaga){
+        DB::table('vagas')
+            ->where('id', $idVaga)
+            ->update(['status' => 'FECHADA']);
+
+        return redirect()
+            ->route('minhasVagasView')
+            ->with('flash_message', 'Vaga fechada com sucesso!');
     }
 }
