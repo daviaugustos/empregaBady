@@ -67,11 +67,12 @@ class VagaController extends Controller {
         'cnhExigida' => $request['cnhExigida'],
         'descricao' => $request['descricao'],
         'status' => 'AGUARDANDO ANALISE',
+        'idEmpresa' => Auth::id(),
     ]);
     //Display a successful message upon save
         return redirect()->route('vagas.index')
-            ->with('flash_message', 'Vaga para 
-             '. $vaga->cargo.' criada com sucesso');
+            ->with('flash_message', 'A vaga: 
+             '. $vaga->cargo.' foi criada com sucesso');
     }
 
     /**
@@ -170,7 +171,7 @@ class VagaController extends Controller {
     }
 
     public function minhasVagasView(){
-        $vagas = Vaga::all(); 
+        $vagas = Vaga::all();
         $viewBag = [
             'vagas' => $vagas
         ];

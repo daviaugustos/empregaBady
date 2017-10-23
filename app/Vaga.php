@@ -10,6 +10,6 @@ class Vaga extends Model
     
     protected $fillable = [
         'cargo', 'quantidadeVagas', 'salario', 'beneficios', 'local', 'diaSemana', 'horario', 
-        'faixaEtaria', 'sexo',  'tipo', 'cnhExigida',  'descricao', 'status'
+        'faixaEtaria', 'sexo',  'tipo', 'cnhExigida',  'descricao', 'status', 'idEmpresa',
     ];
 }
