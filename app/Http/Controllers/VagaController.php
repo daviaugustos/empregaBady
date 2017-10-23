@@ -171,7 +171,8 @@ class VagaController extends Controller {
     }
 
     public function minhasVagasView(){
-        $vagas = Vaga::all();
+        $vagas = DB::table('vagas')
+            ->where('idEmpresa', Auth::id())->get();
         $viewBag = [
             'vagas' => $vagas
         ];
