@@ -21,7 +21,11 @@
         <tr>
           <td class="col-md-6">{{$vaga->cargo}}</td>
           <td class="col-md-2">{{$vaga->status}}</td>
-          <td class="col-md-2"><a class="btn btn-info pull-left" style="margin-right: 3px;">Ver candidatos</a></td>
+          <td class="col-md-2">
+            <a href="{{ route('verCandidatos', $vaga->id) }}" class="btn btn-info pull-left" style="margin-right: 3px;">
+              Ver candidatos
+            </a>
+          </td>
           @if($vaga->status != "FECHADA")
               <td class="col-md-2">
                 <a href="{{ route('fecharVaga', $vaga->id) }}" class="btn btn-info pull-left" style="margin-right: 3px;">

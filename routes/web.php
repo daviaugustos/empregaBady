@@ -45,3 +45,6 @@ Route::get('/minhas-vagas', 'VagaController@minhasVagasView')
 
 Route::get('/fechar-vaga/{idVaga}', 'VagaController@fecharVaga')
     ->name('fecharVaga');
+
+Route::get('/ver-candidatos/{idVaga}', 'VagaController@verCandidatos')
+    ->name('verCandidatos');

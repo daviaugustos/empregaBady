@@ -190,4 +190,14 @@ class VagaController extends Controller {
             ->route('minhasVagasView')
             ->with('flash_message', 'Vaga fechada com sucesso!');
     }
+
+    public function verCandidatos($idVaga){
+        $candidatosVaga = DB::table('user_vaga')
+            ->where('vaga_id', $idVaga)->get();
+            
+        foreach($candidatosVaga as $candidato){
+            print_r($candidato);
+        }
+        
+    }
 }
