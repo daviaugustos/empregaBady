@@ -20,7 +20,7 @@ class CreateColumnEmpresas extends Migration
             $table->string('nomeFantasia');
             $table->string('inscricaoMunicipal');
             $table->string('inscricaoEstadual');
-            $table->string('descricao');
+            $table->longText('descricao');
             
             //Pessoa Física
             $table->string('cpf');

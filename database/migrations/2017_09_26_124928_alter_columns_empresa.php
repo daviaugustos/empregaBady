@@ -20,7 +20,7 @@ class AlterColumnsEmpresa extends Migration
             $table->string('nomeFantasia')->nullable()->change();
             $table->string('inscricaoMunicipal')->nullable()->change();
             $table->string('inscricaoEstadual')->nullable()->change();
-            $table->string('descricao')->nullable()->change();
+            $table->longText('descricao')->nullable()->change();
             
             //Pessoa Física
             $table->string('cpf')->nullable()->change();
@@ -42,7 +42,7 @@ class AlterColumnsEmpresa extends Migration
             $table->string('nomeFantasia')->nullable(false)->change();
             $table->string('inscricaoMunicipal')->nullable(false)->change();
             $table->string('inscricaoEstadual')->nullable(false)->change();
-            $table->string('descricao')->nullable(false)->change();
+            $table->longText('descricao')->nullable(false)->change();
             
             //Pessoa Física
             $table->string('cpf')->nullable(false)->change();
