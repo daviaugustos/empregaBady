@@ -194,10 +194,21 @@ class VagaController extends Controller {
     public function verCandidatos($idVaga){
         $candidatosVaga = DB::table('user_vaga')
             ->where('vaga_id', $idVaga)->get();
+
+        $arrayCandidatosVaga = array();
             
         foreach($candidatosVaga as $candidato){
-            print_r($candidato);
+            $queryUserVagas = DB::table('users')
+                ->where('id', $candidato->user_id)->get();
+
+            $userDados = $queryUserVagas->first();
+            
+            $queryCandidatoDados = DB::table('candidatos')
+                ->where('id', $userDados->contactable_id)->get();
+            
+            $candidatoDados = $queryCandidatoDados->first();
+            array_push($arrayCandidatosVaga, $candidatoDados);
         }
-        
+        print_r($arrayCandidatosVaga);
     }
 }
