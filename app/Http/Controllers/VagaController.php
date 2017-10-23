@@ -22,8 +22,10 @@ class VagaController extends Controller {
      */
 
     public function index() {
-        $vagas = Vaga::orderby('id', 'desc')->paginate(5); //show only 5 items at a time in descending order
+        //$vagas = Vaga::orderby('id', 'desc')->paginate(5); //show only 5 items at a time in descending order
 
+        $vagas = DB::table('vagas')
+            ->where('status', 'ABERTA')->get();
         return view('vagas.index', compact('vagas'));
     }
 
