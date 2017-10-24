@@ -185,7 +185,7 @@ class VagaController extends Controller {
         return;
     }
 
-    public function fecharVaga($idVaga){
+    public function fecharVagaView($idVaga){
         DB::table('vagas')
             ->where('id', $idVaga)
             ->update(['status' => 'FECHADA']);
@@ -195,7 +195,7 @@ class VagaController extends Controller {
             ->with('flash_message', 'Vaga fechada com sucesso!');
     }
 
-    public function verCandidatos($idVaga){
+    public function verCandidatosView($idVaga){
         $candidatosVaga = DB::table('user_vaga')
             ->where('vaga_id', $idVaga)->get();
 

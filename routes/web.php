@@ -43,8 +43,11 @@ Route::get('/aplicar-candidato/{idVaga}/{id}', 'VagaController@aplicarCandidato'
 Route::get('/minhas-vagas', 'VagaController@minhasVagasView')
     ->name('minhasVagasView');
 
-Route::get('/fechar-vaga/{idVaga}', 'VagaController@fecharVaga')
-    ->name('fecharVaga');
+Route::get('/fechar-vaga/{idVaga}', 'VagaController@fecharVagaView')
+    ->name('fecharVagaView');
 
-Route::get('/ver-candidatos/{idVaga}', 'VagaController@verCandidatos')
-    ->name('verCandidatos');
+Route::get('/ver-candidatos/{idVaga}', 'VagaController@verCandidatosView')
+    ->name('verCandidatosView');
+
+Route::get('ver-vaga/{idVaga}', 'VagaController@verVagaView')
+    ->name('verVagaView');
