@@ -12,17 +12,30 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        $roleAdmin = Role::create(['name' => 'AdminFull']);
-        $roleAdmin->givePermissionTo('Administer roles & permissions');
-        $roleAdmin->givePermissionTo('Criar vaga');
-        $roleAdmin->givePermissionTo('Gerenciar vagas');
+        $this->criarRoleAdminFull();
+        $this->criarRoleEmpresa();
+        $this->criarRoleCandidato();
+        $this->criarRoleAdminVagas();
+    }
 
-        $roleCandidato = Role::create(['name' => 'Candidato']);
+    private function criarRoleAdminFull(){
+        $novaRole = Role::create(['name' => 'AdminFull']);
+        $novaRole->givePermissionTo('Administer roles & permissions');
+        $novaRole->givePermissionTo('Criar vaga');
+        $novaRole->givePermissionTo('Gerenciar vagas');
+    }
 
-        $roleEmpresa = Role::create(['name' => 'Empresa']);
-        $roleEmpresa->givePermissionTo('Criar vaga');
-        $roleEmpresa->givePermissionTo('Gerenciar vagas');
+    private function criarRoleCandidato(){
+        $novaRole = Role::create(['name' => 'Candidato']);
+    }
 
-        $roleAdminVagas = Role::create(['name' => 'AdminVagas']);
+    private function criarRoleAdminVagas(){
+        $novaRole = Role::create(['name' => 'AdminVagas']);
+    }
+
+    private function criarRoleEmpresa(){
+        $novaRole = Role::create(['name' => 'Empresa']);
+        $novaRole->givePermissionTo('Criar vaga');
+        $novaRole->givePermissionTo('Gerenciar vagas');
     }
 }

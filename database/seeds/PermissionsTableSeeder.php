@@ -12,6 +12,10 @@ class PermissionsTableSeeder extends Seeder
      */
     public function run()
     {
+        $this->criarPermissoes();
+    }
+
+    private function criarPermissoes(){
         Permission::create(['name' => 'Administer roles & permissions']);
         Permission::create(['name' => 'Criar vaga']);
         Permission::create(['name' => 'Gerenciar vagas']);
