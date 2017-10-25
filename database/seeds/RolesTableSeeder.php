@@ -22,5 +22,7 @@ class RolesTableSeeder extends Seeder
         $roleEmpresa = Role::create(['name' => 'Empresa']);
         $roleEmpresa->givePermissionTo('Criar vaga');
         $roleEmpresa->givePermissionTo('Gerenciar vagas');
+
+        $roleAdminVagas = Role::create(['name' => 'AdminVagas']);
     }
 }

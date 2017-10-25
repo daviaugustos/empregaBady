@@ -60,6 +60,9 @@
                         @can('Criar vaga')
                             <li><a href="{{ route('vagas.create') }}">Cadastrar Vaga</a></li>
                         @endcan
+                        @hasrole('AdminVagas')
+                            <li><a href="{{ route('vagas.create') }}">Gerenciar Vagas</a></li>
+                        @endhasrole
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -218,4 +218,8 @@ class VagaController extends Controller {
         ];
         return view('vagas.ver-candidatos', $viewBag);
     }
+
+    public function gerenciarVagasView(){
+        return view('vagas.gerenciar-vagas');
+    }
 }
