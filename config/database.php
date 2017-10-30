@@ -41,7 +41,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', 'mysql857.umbler.com'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'bd_empregabady'),
             'username' => env('DB_USERNAME', 'adminprefeitura'),
