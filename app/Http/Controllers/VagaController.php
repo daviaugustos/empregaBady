@@ -183,6 +183,25 @@ class VagaController extends Controller {
         return view('vagas.minhas-vagas', $viewBag);
     }
 
+    public function minhasVagasCandidatoView(){
+        $queryCandidatoVagas = DB::table('user_vaga')
+            ->where('user_id', Auth::id())->get();
+            
+        $arrayVagas = array();
+            
+        foreach($queryCandidatoVagas as $userIdRow){
+            $queryVaga = DB::table('vagas')
+                ->where('id', $userIdRow->vaga_id)->get();
+
+            $vagaDados = $queryVaga->first();
+            array_push($arrayVagas, $vagaDados);
+        }
+        $viewBag = [
+            'vagas' => $arrayVagas
+        ];
+        return view('vagas.minhas-vagas-candidato', $viewBag);
+    }
+
     public function recuperarTodasVagas(){
         return;
     }

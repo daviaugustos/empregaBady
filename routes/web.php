@@ -40,7 +40,7 @@ Route::resource('vagas', 'VagaController');
 Route::get('/aplicar-candidato/{idVaga}/{id}', 'VagaController@aplicarCandidato')
     ->name('aplicarCandidato');
 
-Route::get('/minhas-vagas', 'VagaController@minhasVagasView')
+Route::get('/empresa/minhas-vagas', 'VagaController@minhasVagasView')
     ->name('minhasVagasView');
 
 Route::get('/fechar-vaga/{idVaga}', 'VagaController@fecharVagaView')
@@ -54,3 +54,6 @@ Route::get('ver-vaga/{idVaga}', 'VagaController@verVagaView')
 
 Route::get('gerenciar-vagas', 'VagaController@gerenciarVagasView')
     ->name('gerenciarVagasView');
+    
+Route::get('/candidato/minhas-vagas', 'VagaController@minhasVagasCandidatoView')
+    ->name('minhasVagasCandidatoView');
