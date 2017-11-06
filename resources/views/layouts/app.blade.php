@@ -54,9 +54,9 @@
                         @if (Auth::guest())
                             <li><a href="{{ route('registrarEmpresaView') }}">Cadastrar minha empresa</a></li>
                         @endif
-                        @can('Gerenciar vagas')
+                        @role('Candidato')
                             <li><a href="{{ route('minhasVagasView') }}">Minhas Vagas</a></li>
-                        @endcan
+                        @endrole
                         @can('Criar vaga')
                             <li><a href="{{ route('vagas.create') }}">Cadastrar Vaga</a></li>
                         @endcan

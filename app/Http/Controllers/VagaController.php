@@ -169,7 +169,9 @@ class VagaController extends Controller {
             'vaga_id' => $idVaga
         ]);
 
-        echo "ta salvo";
+        return redirect()
+            ->route('vagas.index')
+            ->with('flash_message', 'Você se candidatou para a vaga com sucesso!');
     }
 
     public function minhasVagasView(){
